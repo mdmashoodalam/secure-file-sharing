@@ -1,0 +1,122 @@
+# ===========================
+# Application Configuration
+# ===========================
+spring.application.name=secure-file-sharing
+
+# ===========================
+# MySQL Database Config
+# ===========================
+spring.datasource.url=jdbc:mysql://localhost:3306/file_sharing_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=root
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# ===========================
+# JPA / Hibernate Config
+# ===========================
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+spring.jpa.properties.hibernate.format_sql=true
+
+# ===========================
+# JWT Configuration
+# ===========================
+# Change this secret key to a long random string in production!
+app.jwt.secret=2746b8c188855429935fe95ddd4bd5ce7eac763a17fe3801bf2c72863ef646db
+# Token expires in 24 hours (in milliseconds)
+app.jwt.expiration=86400000
+
+# ===========================
+# File Upload Size Limits
+# ===========================
+
+# For 600MB limit:
+spring.servlet.multipart.max-file-size=1024MB
+spring.servlet.multipart.max-request-size=1024MB
+
+# Increase Tomcat connection timeout for large uploads
+server.connection-timeout=300000
+
+# Set temp directory for large file uploads
+spring.servlet.multipart.location=/tmp
+spring.servlet.multipart.file-size-threshold=10MB
+
+# Folder where uploaded files will be saved
+app.upload.dir=./uploads
+
+# ===========================
+# Secure Token Config
+# ===========================
+# Temp download link expires in 1 hour (milliseconds)
+app.secure.token.expiry=3600000
+
+# Add more file types (video, audio etc)
+app.allowed.file.types=image/jpeg,image/png,image/gif,application/pdf,text/plain,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/zip,video/mp4,video/mpeg,audio/mpeg,audio/wav
+
+# ===========================
+# Server Port
+# ===========================
+server.port=8080
+
+# ===========================
+# Logging
+# ===========================
+logging.level.com.fileshare=DEBUG
+logging.level.org.springframework.security=INFO
+
+# ===========================
+# Database Connection Pool
+# HikariCP (built into Spring Boot)
+# ===========================
+
+# Max connections in the pool
+spring.datasource.hikari.maximum-pool-size=20
+
+# Min idle connections kept alive
+spring.datasource.hikari.minimum-idle=5
+
+# Connection timeout (30 seconds)
+spring.datasource.hikari.connection-timeout=30000
+
+# Max lifetime of a connection (10 minutes)
+spring.datasource.hikari.max-lifetime=600000
+
+# Idle timeout (5 minutes)
+spring.datasource.hikari.idle-timeout=300000
+
+# ===========================
+# JPA Performance Settings
+# ===========================
+
+# Batch inserts for better performance
+spring.jpa.properties.hibernate.jdbc.batch_size=20
+spring.jpa.properties.hibernate.order_inserts=true
+spring.jpa.properties.hibernate.order_updates=true
+
+# Disable open-session-in-view (important for performance)
+spring.jpa.open-in-view=false
+
+# ===========================
+# Server Thread Pool
+# ===========================
+
+# How many concurrent requests Tomcat handles
+server.tomcat.threads.max=200
+server.tomcat.threads.min-spare=20
+server.tomcat.max-connections=10000
+server.tomcat.accept-count=200
+
+# ===========================
+# Google OAuth2 (Add your credentials here)
+# ===========================
+spring.security.oauth2.client.registration.google.client-id=YOUR_GOOGLE_CLIENT_ID
+spring.security.oauth2.client.registration.google.client-secret=YOUR_GOOGLE_CLIENT_SECRET
+spring.security.oauth2.client.registration.google.scope=email,profile
+
+# ===========================
+# GitHub OAuth2 (Add your credentials here)
+# ===========================
+spring.security.oauth2.client.registration.github.client-id=YOUR_GITHUB_CLIENT_ID
+spring.security.oauth2.client.registration.github.client-secret=YOUR_GITHUB_CLIENT_SECRET
+spring.security.oauth2.client.registration.github.scope=read:user,user:email

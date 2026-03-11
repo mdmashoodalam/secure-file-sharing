@@ -1,0 +1,38 @@
+# Backend
+backend/target/
+backend/.idea/
+backend/*.iml
+backend/out/
+
+# Frontend
+frontend/node_modules/
+frontend/build/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Environment
+.env
+.env.local
+application.properties
+backend/src/main/resources/application.properties
+
+# Uploads
+uploads/
+*.log
