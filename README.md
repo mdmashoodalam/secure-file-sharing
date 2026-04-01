@@ -2,6 +2,9 @@
 
 A full-stack secure file sharing app built with **Spring Boot** (backend) and **ReactJS + Tailwind CSS** (frontend).
 
+## 🚀 Live Demo
+👉http://35.154.75.216/
+
 ---
 
 ## 📁 Project Structure
@@ -352,7 +355,7 @@ Authorization: Bearer <admin_token>
 **Md Mashood Alam**
 
 * 💼 Full Stack Developer
-* 🚀 Passionate about MERN & Spring Boot
+* 🚀 Passionate about  Spring Boot
 
 ---
 
