@@ -3,7 +3,9 @@
 A full-stack secure file sharing app built with **Spring Boot** (backend) and **ReactJS + Tailwind CSS** (frontend).
 
 ## 🚀 Live Demo
-👉http://35.154.75.216/
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](http://35.154.75.216/)
+
 
 ---
 
