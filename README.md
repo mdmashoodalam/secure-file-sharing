@@ -261,6 +261,16 @@ Error example:
 
 ---
 
+
+## 📸 Screenshots
+
+<img width="1920" height="981" alt="Web1" src="https://github.com/user-attachments/assets/a35c2c48-d7d1-4eec-b2a4-8a559e8f3b07" />
+
+<img width="1908" height="982" alt="Web2" src="https://github.com/user-attachments/assets/5608b181-3905-462f-877b-e4d1e0e97c0f" />
+
+<img width="1918" height="982" alt="Web3" src="https://github.com/user-attachments/assets/f3047542-7b17-4f57-b5bb-fbd6cd1b1f64" />
+<img width="1920" height="975" alt="Web4" src="https://github.com/user-attachments/assets/c9bf6eab-d02f-4b60-98b6-0ede3888b708" />
+
 ## 🧪 Postman Testing
 
 1. Import `SecureFileSharing.postman_collection.json` into Postman
@@ -335,3 +345,28 @@ UPDATE users SET role = 'ROLE_ADMIN' WHERE email = 'your@email.com';
 PUT /api/admin/users/2/role?role=ROLE_ADMIN
 Authorization: Bearer <admin_token>
 ```
+
+
+## 👨‍💻 Author
+
+**Md Mashood Alam**
+
+* 💼 Full Stack Developer
+* 🚀 Passionate about MERN & Spring Boot
+
+---
+
+## ⭐ Support
+
+If you like this project:
+
+* ⭐ Star this repo
+* 🍴 Fork it
+* 📢 Share with others
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
